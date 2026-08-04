@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reef — Vista previa</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: white;
+        --color-foreground: #0f172a;
+        --color-primary: #10b981;
+        --color-primary-foreground: #ffffff;
+        --color-marino: #1e293b;
+        --color-muted: #f1f5f9;
+        --color-muted-foreground: #64748b;
+      }
+    </style>
+    <style>
+      .container { margin-inline: auto; max-width: 1200px; padding-inline: 1.5rem; }
+    </style>
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-muted bg-background/95">
+      <div class="container flex h-16 items-center justify-between">
+        <a class="flex items-center gap-2.5" href="#">
+          <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5">
+            <img alt="Reef" class="size-full object-contain" src="reef-white.png" />
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-bold tracking-tight text-marino">Reef</span>
+            <span class="text-[10px] font-medium uppercase tracking-wider text-muted-foreground" data-es="un producto Manta" data-en="a Manta product">un producto Manta</span>
+          </span>
+        </a>
+        <nav class="hidden gap-6 md:flex">
+          <a class="text-sm font-medium text-muted-foreground hover:text-primary" href="../index.html" data-es="← Manta" data-en="← Manta">← Manta</a>
+          <a class="text-sm font-medium hover:text-primary" href="#features" data-es="Características" data-en="Features">Características</a>
+          <a class="text-sm font-medium hover:text-primary" href="#pricing" data-es="Precios" data-en="Pricing">Precios</a>
+          <a class="text-sm font-medium hover:text-primary" href="#about" data-es="Acerca" data-en="About">Acerca</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button onclick="toggleLang()" class="inline-flex h-9 items-center gap-1.5 rounded-md border border-muted bg-background px-3 text-sm font-medium shadow-sm hover:bg-muted">
+            <svg class="size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langcode">EN</span>
+          </button>
+          <a class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="#pricing" data-es="Descargar Reef" data-en="Download Reef">Descargar Reef</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="py-20 md:py-28">
+        <div class="container">
+          <div class="grid gap-10 lg:grid-cols-2 lg:gap-12">
+            <div class="flex flex-col justify-center space-y-5">
+              <span class="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary" data-es="Escritorio · Windows · Tus datos en tu equipo" data-en="Desktop · Windows · Your data stays on your device">Escritorio · Windows · Tus datos en tu equipo</span>
+              <h1 class="text-4xl font-bold tracking-tighter text-marino md:text-6xl" data-es="La gestión de tus rentas, sin complicarte la vida." data-en="Managing your rentals, without the headache.">La gestión de tus rentas, sin complicarte la vida.</h1>
+              <p class="max-w-[600px] text-muted-foreground md:text-xl" data-es="Reef lleva de la mano al arrendador: controla propiedades, inquilinos, cobros y pagos desde tu computadora. Privado, claro y hecho a la medida de tu operación." data-en="Reef guides landlords every step of the way: track properties, tenants, charges and payments from your computer. Private, clear, and built to fit the way you work.">Reef lleva de la mano al arrendador: controla propiedades, inquilinos, cobros y pagos desde tu computadora. Privado, claro y hecho a la medida de tu operación.</p>
+              <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                <a class="inline-flex h-11 items-center justify-center gap-1 rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="#pricing" data-es="Descargar Reef" data-en="Download Reef">Descargar Reef</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-md border border-muted bg-background px-8 text-sm font-medium shadow-sm hover:bg-muted" href="#features" data-es="Ver características" data-en="See features">Ver características</a>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <img alt="Reef" class="w-full rounded-xl border border-muted object-cover shadow-2xl" src="reef-finanzas.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="bg-muted py-20" id="features">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl" data-es="Todo lo que necesitas, en un solo lugar" data-en="Everything you need, in one place">Todo lo que necesitas, en un solo lugar</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl" data-es="Reef reúne el día a día de tus rentas en una app clara, guiada y en español." data-en="Reef brings the day-to-day of your rentals into one clear, guided app.">Reef reúne el día a día de tus rentas en una app clara, guiada y en español.</p>
+          </div>
+          <div id="features-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <!-- PRICING (una sola licencia: Starter = 1 cuenta de propietario) -->
+      <section class="bg-muted py-20" id="pricing">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl" data-es="Una licencia, sin sorpresas" data-en="One license, no surprises">Una licencia, sin sorpresas</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl" data-es="Cada licencia habilita una cuenta de propietario. Sin anuncios, sin vender tus datos." data-en="Each license enables one owner account. No ads, no selling your data.">Cada licencia habilita una cuenta de propietario. Sin anuncios, sin vender tus datos.</p>
+          </div>
+          <div class="mx-auto max-w-md">
+            <div class="flex flex-col rounded-2xl border-2 border-primary bg-background shadow-lg">
+              <div class="p-8">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl font-bold text-marino">Starter</h3>
+                  <span class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground" data-es="50% de descuento" data-en="50% off">50% de descuento</span>
+                </div>
+                <div class="mt-4 flex items-baseline gap-3 text-marino"><span class="text-2xl font-medium text-muted-foreground line-through">$3,600</span><span class="text-5xl font-extrabold tracking-tight">$1,800</span><span class="text-sm text-muted-foreground" data-es="MXN anual — primer año" data-en="MXN / year — first year">MXN anual — primer año</span></div>
+                <p class="mt-4 text-muted-foreground" data-es="Todo Reef, para una cuenta de propietario." data-en="All of Reef, for one owner account.">Todo Reef, para una cuenta de propietario.</p>
+                <div class="mt-4 rounded-lg bg-primary/10 px-4 py-3 text-center text-sm font-semibold text-primary" data-es="🎁 Se regalan los primeros 6 meses de prueba" data-en="🎁 First 6 months of trial, on us">🎁 Se regalan los primeros 6 meses de prueba</div>
+                <p class="mt-3 text-sm text-muted-foreground" data-es="Cada licencia equivale a 1 cuenta de propietario." data-en="Each license equals 1 owner account.">Cada licencia equivale a 1 cuenta de propietario.</p>
+                <ul id="pricing-features" class="mt-6 space-y-4"></ul>
+              </div>
+              <div class="mt-auto p-8 pt-0"><a href="ReefSetup.exe" download class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90"><svg class="size-4 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg><span data-es="Descargar" data-en="Download">Descargar</span></a></div>
+            </div>
+            <p class="mt-6 text-center text-muted-foreground"><span data-es="¿Administras varias carteras? Suma una licencia por cada cuenta de propietario." data-en="Managing several portfolios? Add one license per owner account.">¿Administras varias carteras? Suma una licencia por cada cuenta de propietario.</span> <a class="font-medium text-primary hover:underline" href="#" data-es="Escríbenos" data-en="Get in touch">Escríbenos</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="py-20" id="about">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl" data-es="Manta y Reef" data-en="Manta and Reef">Manta y Reef</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl" data-es="Un grupo que crea software para llevar a la gente de la mano — empezando por la gestión de rentas." data-en="A group building software that guides people every step — starting with rental management.">Un grupo que crea software para llevar a la gente de la mano — empezando por la gestión de rentas.</p>
+          </div>
+          <div class="grid gap-12 md:grid-cols-2 lg:gap-16">
+            <div class="space-y-4">
+              <h3 class="text-2xl font-bold text-marino" data-es="¿Qué es Manta?" data-en="What is Manta?">¿Qué es Manta?</h3>
+              <p class="text-muted-foreground" data-es="Manta es un grupo de software con una obsesión: que la herramienta te lleve de la mano. Nada de manuales gruesos ni pantallas frías, sino flujos guiados y lenguaje claro." data-en="Manta is a software group with one obsession: the tool should guide you. No thick manuals or cold screens — just guided flows and plain language.">Manta es un grupo de software con una obsesión: que la herramienta te lleve de la mano. Nada de manuales gruesos ni pantallas frías, sino flujos guiados y lenguaje claro.</p>
+              <h3 class="mt-8 text-2xl font-bold text-marino" data-es="¿Qué es Reef?" data-en="What is Reef?">¿Qué es Reef?</h3>
+              <p class="text-muted-foreground" data-es="Reef es el primer producto de Manta: gestión arrendataria pensada para el arrendador que quiere claridad. Compite por experiencia, no por saturarte de funciones." data-en="Reef is Manta's first product: rental management for landlords who want clarity. It competes on experience, not on overwhelming you with features.">Reef es el primer producto de Manta: gestión arrendataria pensada para el arrendador que quiere claridad. Compite por experiencia, no por saturarte de funciones.</p>
+            </div>
+            <div class="flex items-center">
+              <div class="w-full rounded-2xl border border-muted bg-muted/40 p-10 text-center">
+                <img alt="Manta" class="mx-auto size-28 object-contain" src="manta-marino.png" />
+                <p class="mt-6 text-xl font-bold text-marino" data-es="Reef es parte de Manta" data-en="Reef is part of Manta">Reef es parte de Manta</p>
+                <p class="mx-auto mt-2 max-w-xs text-muted-foreground" data-es="Un producto hoy; más soluciones en camino, con la misma filosofía." data-en="One product today; more solutions on the way, with the same philosophy.">Un producto hoy; más soluciones en camino, con la misma filosofía.</p>
+                <div class="mt-6 flex justify-center gap-3">
+                  <span class="rounded-md bg-marino px-3 py-1 text-sm font-semibold text-white">Reef</span>
+                  <span class="rounded-md border border-dashed border-muted-foreground/40 px-3 py-1 text-sm text-muted-foreground" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
+                  <span class="rounded-md border border-dashed border-muted-foreground/40 px-3 py-1 text-sm text-muted-foreground" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="bg-marino py-20 text-white">
+        <div class="container text-center">
+          <h2 class="text-3xl font-bold tracking-tighter md:text-5xl" data-es="¿Listo para ordenar tus rentas?" data-en="Ready to get your rentals in order?">¿Listo para ordenar tus rentas?</h2>
+          <p class="mx-auto mt-3 max-w-[700px] text-white/80 md:text-xl" data-es="Descarga Reef y empieza hoy. Si tienes dudas, escríbenos por WhatsApp — te llevamos de la mano." data-en="Download Reef and start today. Questions? Message us on WhatsApp — we'll guide you.">Descarga Reef y empieza hoy. Si tienes dudas, escríbenos por WhatsApp — te llevamos de la mano.</p>
+          <div class="mt-6 flex flex-col justify-center gap-2 min-[400px]:flex-row">
+            <a class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="#pricing" data-es="Descargar Reef" data-en="Download Reef">Descargar Reef</a>
+            <a class="inline-flex h-11 items-center justify-center rounded-md border border-white/40 px-8 text-sm font-medium text-white hover:bg-white/10" href="#" data-es="Escríbenos por WhatsApp" data-en="Message us on WhatsApp">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-muted bg-background">
+      <div class="container py-12">
+        <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+          <div class="col-span-2">
+            <div class="flex items-center gap-2.5">
+              <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Manta" class="size-full object-contain" src="manta-white.png" /></span>
+              <span class="text-xl font-bold tracking-tight text-marino">Manta</span>
+            </div>
+            <p class="mt-4 max-w-xs text-muted-foreground" data-es="Software que te lleva de la mano. Reef es el primer producto de Manta: gestión de rentas clara para el arrendador." data-en="Software that guides you every step. Reef is Manta's first product: clear rental management for landlords.">Software que te lleva de la mano. Reef es el primer producto de Manta: gestión de rentas clara para el arrendador.</p>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Reef</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li data-es="Características" data-en="Features">Características</li>
+              <li data-es="Precios" data-en="Pricing">Precios</li>
+              <li data-es="Instructivo" data-en="Guide">Instructivo</li>
+              <li data-es="Descargar" data-en="Download">Descargar</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider" data-es="Soporte" data-en="Support">Soporte</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li>WhatsApp: 555 808 0635</li>
+              <li>etorres.paul@gmail.com</li>
+              <li data-es="Contáctanos" data-en="Contact us">Contáctanos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
+          © 2026 Manta · Reef.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const T = {
+        features: {
+          es: [
+            ['Tu día de un vistazo','El panel de Inicio te dice cuánto cobraste, qué falta por entrar y qué necesita tu atención, con un semáforo por contrato.'],
+            ['Propiedades, inquilinos y contratos','Registra inmuebles e inquilinos, arrienda en pasos guiados y adjunta el documento del contrato para tenerlo siempre a la mano.'],
+            ['Cobros y pagos claros','Adeudos, pagos y egresos ordenados. Tú decides a qué adeudo se aplica cada pago; registra IVA y método de pago sin enredos.'],
+            ['La renta se cobra sola','Los adeudos recurrentes generan la renta de cada mes automáticamente. Pausa o ajusta cuando lo necesites.'],
+            ['Indicadores que entiendes','Ingreso neto operativo, ingreso por unidad, morosidad y días de cobro. El pulso de tu negocio, filtrable a tu medida.'],
+            ['Privado y tuyo','Tus datos viven en tu equipo, no en la nube. Genera reportes y recibos en PDF, y verifica la integridad de tus cuentas cuando quieras.'],
+          ],
+          en: [
+            ['Your day at a glance',"The Home panel shows what you've collected, what's still pending and what needs attention, with a traffic light per contract."],
+            ['Properties, tenants and leases','Register properties and tenants, lease in guided steps, and attach the contract document to keep it always handy.'],
+            ['Clear charges and payments','Debts, payments and expenses, organized. You decide which debt each payment applies to; record VAT and payment method with no fuss.'],
+            ['Rent charges itself',"Recurring charges generate each month's rent automatically. Pause or adjust whenever you need."],
+            ['Metrics you understand','Net operating income, income per unit, delinquency and days to collect. Your business pulse, filtered your way.'],
+            ['Private and yours',"Your data lives on your device, not in the cloud. Generate PDF reports and receipts, and check your data's integrity anytime."],
+          ],
+        },
+        pricingFeatures: {
+          es: ['1 cuenta de propietario','Inmuebles ilimitados','Todas las funciones','Soporte por WhatsApp'],
+          en: ['1 owner account','Unlimited properties','All features','WhatsApp support'],
+        },
+      };
+      let lang = localStorage.getItem('manta-lang') || 'es';
+      const check = '<svg class="size-5 text-primary mr-2 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>';
+
+      function renderDynamic() {
+        document.getElementById('features-grid').innerHTML = T.features[lang].map(([ti,de]) =>
+          `<div class="flex flex-col items-start gap-2 rounded-lg border bg-background p-6 shadow-sm">
+             <div class="rounded-full bg-primary/10 p-2 text-primary">${check.replace('mr-2','')}</div>
+             <h3 class="text-xl font-bold text-marino">${ti}</h3>
+             <p class="text-muted-foreground">${de}</p></div>`).join('');
+        document.getElementById('pricing-features').innerHTML = T.pricingFeatures[lang]
+          .map(f => `<li class="flex items-center">${check}<span>${f}</span></li>`).join('');
+      }
+      function aplicarIdioma() {
+        document.documentElement.lang = lang;
+        document.getElementById('langcode').textContent = lang === 'es' ? 'EN' : 'ES';
+        document.querySelectorAll('[data-es]').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+        renderDynamic();
+      }
+      function toggleLang() {
+        lang = lang === 'es' ? 'en' : 'es';
+        localStorage.setItem('manta-lang', lang);
+        aplicarIdioma();
+      }
+      aplicarIdioma();
+    </script>
+  </body>
+</html>
