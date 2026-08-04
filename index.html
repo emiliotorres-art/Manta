@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manta — Software que te lleva de la mano</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: white;
+        --color-foreground: #0f172a;
+        --color-primary: #10b981;
+        --color-primary-foreground: #ffffff;
+        --color-marino: #1e293b;
+        --color-muted: #f1f5f9;
+        --color-muted-foreground: #64748b;
+      }
+    </style>
+    <style>
+      .container { margin-inline: auto; max-width: 1200px; padding-inline: 1.5rem; }
+    </style>
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-muted bg-background/95">
+      <div class="container flex h-16 items-center justify-between">
+        <a class="flex items-center gap-2.5" href="#">
+          <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5">
+            <img alt="Manta" class="size-full object-contain" src="manta-white.png" />
+          </span>
+          <span class="text-xl font-bold tracking-tight text-marino">Manta</span>
+        </a>
+        <nav class="hidden gap-6 md:flex">
+          <a class="text-sm font-medium hover:text-primary" href="#productos" data-es="Productos" data-en="Products">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="#manta" data-es="Nosotros" data-en="About">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button onclick="toggleLang()" class="inline-flex h-9 items-center gap-1.5 rounded-md border border-muted bg-background px-3 text-sm font-medium shadow-sm hover:bg-muted">
+            <svg class="size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langcode">EN</span>
+          </button>
+          <a class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="#productos" data-es="Ver productos" data-en="See products">Ver productos</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="py-20 md:py-28">
+        <div class="container text-center">
+          <span class="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary" data-es="Grupo de software" data-en="Software group">Grupo de software</span>
+          <h1 class="mx-auto mt-5 max-w-[820px] text-4xl font-bold tracking-tighter text-marino md:text-6xl" data-es="Software que te lleva de la mano." data-en="Software that guides you every step.">Software que te lleva de la mano.</h1>
+          <p class="mx-auto mt-5 max-w-[680px] text-muted-foreground md:text-xl" data-es="Manta crea herramientas claras y guiadas para tu día a día. Nada de manuales gruesos ni pantallas frías: flujos simples y lenguaje humano." data-en="Manta builds clear, guided tools for your everyday work. No thick manuals or cold screens — simple flows and human language.">Manta crea herramientas claras y guiadas para tu día a día. Nada de manuales gruesos ni pantallas frías: flujos simples y lenguaje humano.</p>
+          <div class="mt-8 flex justify-center">
+            <a class="inline-flex h-11 items-center justify-center gap-1 rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="#productos" data-es="Ver nuestros productos" data-en="See our products">Ver nuestros productos</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUESTROS PRODUCTOS -->
+      <section class="bg-muted py-20" id="productos">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl" data-es="Nuestros productos" data-en="Our products">Nuestros productos</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl" data-es="Empezamos con uno; vienen más, con la misma filosofía." data-en="We start with one; more are on the way, with the same philosophy.">Empezamos con uno; vienen más, con la misma filosofía.</p>
+          </div>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Tarjeta: Reef -->
+            <a href="reef/index.html" class="group flex flex-col rounded-2xl border border-muted bg-background p-8 shadow-sm transition hover:-translate-y-1 hover:border-primary hover:shadow-lg">
+              <span class="flex size-16 items-center justify-center rounded-2xl bg-marino p-3">
+                <img alt="Reef" class="size-full object-contain" src="reef-white.png" />
+              </span>
+              <h3 class="mt-5 text-2xl font-bold text-marino">Reef</h3>
+              <p class="mt-2 flex-1 text-muted-foreground" data-es="Gestión de rentas para el arrendador que quiere claridad: propiedades, inquilinos, cobros y pagos, guiado y en español." data-en="Rental management for landlords who want clarity: properties, tenants, charges and payments — guided, in plain language.">Gestión de rentas para el arrendador que quiere claridad: propiedades, inquilinos, cobros y pagos, guiado y en español.</p>
+              <span class="mt-4 inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary" data-es="Escritorio · Windows" data-en="Desktop · Windows">Escritorio · Windows</span>
+              <span class="mt-6 inline-flex items-center gap-1 font-semibold text-primary" data-es="Conocer Reef →" data-en="Explore Reef →">Conocer Reef →</span>
+            </a>
+
+            <!-- Tarjetas: próximamente -->
+            <div class="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-muted-foreground/25 p-8 text-center">
+              <span class="flex size-16 items-center justify-center rounded-2xl bg-muted text-3xl text-muted-foreground/70">✦</span>
+              <h3 class="mt-5 text-xl font-bold text-muted-foreground" data-es="Próximamente" data-en="Coming soon">Próximamente</h3>
+              <p class="mt-2 text-sm text-muted-foreground" data-es="Nuevas soluciones Manta en camino." data-en="New Manta solutions on the way.">Nuevas soluciones Manta en camino.</p>
+            </div>
+            <div class="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-muted-foreground/25 p-8 text-center">
+              <span class="flex size-16 items-center justify-center rounded-2xl bg-muted text-3xl text-muted-foreground/70">✦</span>
+              <h3 class="mt-5 text-xl font-bold text-muted-foreground" data-es="Próximamente" data-en="Coming soon">Próximamente</h3>
+              <p class="mt-2 text-sm text-muted-foreground" data-es="Nuevas soluciones Manta en camino." data-en="New Manta solutions on the way.">Nuevas soluciones Manta en camino.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ ES MANTA -->
+      <section class="py-20" id="manta">
+        <div class="container">
+          <div class="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
+            <div class="space-y-4">
+              <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl" data-es="¿Qué es Manta?" data-en="What is Manta?">¿Qué es Manta?</h2>
+              <p class="text-muted-foreground md:text-lg" data-es="Manta es un grupo de software con una obsesión: que la herramienta te lleve de la mano. Diseñamos cada producto para que se entienda solo, hable claro y respete tu información." data-en="Manta is a software group with one obsession: the tool should guide you. We design every product to be self-explanatory, speak plainly and respect your data.">Manta es un grupo de software con una obsesión: que la herramienta te lleve de la mano. Diseñamos cada producto para que se entienda solo, hable claro y respete tu información.</p>
+              <p class="text-muted-foreground md:text-lg" data-es="Hoy nuestro primer producto es Reef, para la gestión de rentas. Y estamos construyendo más." data-en="Today our first product is Reef, for rental management. And we're building more.">Hoy nuestro primer producto es Reef, para la gestión de rentas. Y estamos construyendo más.</p>
+            </div>
+            <div class="flex items-center">
+              <div class="w-full rounded-2xl border border-muted bg-muted/40 p-10 text-center">
+                <img alt="Manta" class="mx-auto size-28 object-contain" src="manta-marino.png" />
+                <p class="mt-6 text-xl font-bold text-marino">Manta</p>
+                <p class="mx-auto mt-2 max-w-xs text-muted-foreground" data-es="Un producto hoy; más soluciones en camino, con la misma filosofía." data-en="One product today; more solutions on the way, with the same philosophy.">Un producto hoy; más soluciones en camino, con la misma filosofía.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="bg-marino py-20 text-white" id="contacto">
+        <div class="container text-center">
+          <h2 class="text-3xl font-bold tracking-tighter md:text-5xl" data-es="Hablemos" data-en="Let's talk">Hablemos</h2>
+          <p class="mx-auto mt-3 max-w-[700px] text-white/80 md:text-xl" data-es="¿Dudas o quieres saber más de nuestros productos? Escríbenos, te llevamos de la mano." data-en="Questions or want to know more about our products? Reach out — we'll guide you.">¿Dudas o quieres saber más de nuestros productos? Escríbenos, te llevamos de la mano.</p>
+          <div class="mt-6 flex flex-col items-center justify-center gap-3 min-[400px]:flex-row">
+            <a class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="https://wa.me/525558080635" data-es="Escríbenos por WhatsApp" data-en="Message us on WhatsApp">Escríbenos por WhatsApp</a>
+            <a class="inline-flex h-11 items-center justify-center rounded-md border border-white/40 px-8 text-sm font-medium text-white hover:bg-white/10" href="mailto:etorres.paul@gmail.com">etorres.paul@gmail.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-muted bg-background">
+      <div class="container py-12">
+        <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+          <div class="col-span-2">
+            <div class="flex items-center gap-2.5">
+              <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Manta" class="size-full object-contain" src="manta-white.png" /></span>
+              <span class="text-xl font-bold tracking-tight text-marino">Manta</span>
+            </div>
+            <p class="mt-4 max-w-xs text-muted-foreground" data-es="Software que te lleva de la mano. Empezamos con Reef; vienen más soluciones." data-en="Software that guides you every step. We start with Reef; more solutions are coming.">Software que te lleva de la mano. Empezamos con Reef; vienen más soluciones.</p>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider" data-es="Productos" data-en="Products">Productos</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="reef/index.html">Reef</a></li>
+              <li class="text-muted-foreground/60" data-es="Más, pronto" data-en="More, soon">Más, pronto</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider" data-es="Soporte" data-en="Support">Soporte</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li>WhatsApp: 555 808 0635</li>
+              <li>etorres.paul@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
+          © 2026 Manta.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let lang = localStorage.getItem('manta-lang') || 'es';
+      function aplicarIdioma() {
+        document.documentElement.lang = lang;
+        document.getElementById('langcode').textContent = lang === 'es' ? 'EN' : 'ES';
+        document.querySelectorAll('[data-es]').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      }
+      function toggleLang() {
+        lang = lang === 'es' ? 'en' : 'es';
+        localStorage.setItem('manta-lang', lang);
+        aplicarIdioma();
+      }
+      aplicarIdioma();
+    </script>
+  </body>
+</html>
