@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recibo de pago parcial de renta con saldo pendiente · Reef</title>
+    <meta name="description" content="¿Tu inquilino abonó menos de la renta? Genera el recibo con saldo anterior, abono y saldo pendiente. Gratis y en PDF." />
+    <link rel="canonical" href="https://mantasssp.com/reef/recibo-de-renta/pago-parcial/" />
+    <link rel="icon" type="image/png" href="../../assets/reef-white.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recibo de pago parcial de renta — con saldo pendiente" />
+    <meta property="og:description" content="Documenta el abono: saldo anterior, abono y saldo pendiente. Genera el recibo en PDF, sin registro." />
+    <meta property="og:url" content="https://mantasssp.com/reef/recibo-de-renta/pago-parcial/" />
+    <meta name="robots" content="index,follow" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: white;
+        --color-foreground: #0f172a;
+        --color-primary: #10b981;
+        --color-primary-foreground: #ffffff;
+        --color-marino: #1e293b;
+        --color-muted: #f1f5f9;
+        --color-muted-foreground: #64748b;
+        --color-borde: #e2e8f0;
+      }
+    </style>
+    <link rel="stylesheet" href="../../sitio.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cómo hago un recibo si el inquilino pagó incompleto?", "acceptedAnswer": { "@type": "Answer", "text": "Registra el saldo anterior, el abono que sí entró y deja calculado el saldo pendiente. El recibo muestra la cascada completa para que quede claro cuánto falta." } },
+        { "@type": "Question", "name": "¿Qué es el saldo pendiente en un recibo de renta?", "acceptedAnswer": { "@type": "Answer", "text": "Es lo que queda por pagar después del abono: saldo anterior menos abono. Documentarlo evita discusiones y te deja el rastro del adeudo." } },
+        { "@type": "Question", "name": "¿Conviene dar recibo aunque el pago sea parcial?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Dar recibo del abono protege a las dos partes: el inquilino comprueba lo que pagó y el arrendador deja constancia de lo que aún se debe." } }
+      ]
+    }
+    </script>
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-muted bg-background/90 backdrop-blur">
+      <div class="container flex h-16 items-center justify-between">
+        <a class="flex items-center gap-2.5" href="../../index.html">
+          <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Reef" class="size-full object-contain" src="../../assets/reef-white.png" /></span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-bold tracking-tight text-marino">Reef</span>
+            <span class="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">un producto Manta</span>
+          </span>
+        </a>
+        <nav class="hidden gap-6 md:flex">
+          <a class="text-sm font-medium hover:text-primary" href="../../index.html#features">Características</a>
+          <a class="text-sm font-medium hover:text-primary" href="../../index.html#pricing">Precios</a>
+          <a class="text-sm font-medium hover:text-primary" href="../../guias/control-de-pagos-de-renta/">Guías</a>
+          <a class="text-sm font-medium text-primary hover:underline" href="../">Recibos gratis</a>
+        </nav>
+        <a class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="../../descargar/">Descargar Reef</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="fondo-hero py-14 md:py-20">
+        <div class="container grid items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
+          <div class="space-y-5">
+            <nav class="text-xs text-muted-foreground"><a class="hover:text-primary" href="../../index.html">Reef</a> <span class="mx-1">/</span> <a class="hover:text-primary" href="../">Recibo de renta</a> <span class="mx-1">/</span> Pago parcial</nav>
+            <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
+              Abonos y saldo pendiente
+            </span>
+            <h1 class="text-4xl font-bold tracking-tighter text-marino md:text-5xl">Recibo cuando el inquilino paga solo una parte</h1>
+            <p class="max-w-[580px] text-muted-foreground md:text-xl">No siempre entra la renta completa. En vez de no dar recibo, documenta el abono con la cascada <strong class="text-marino">saldo anterior → abono → saldo pendiente</strong>. Así ambos saben exactamente cuánto falta.</p>
+            <a href="../?tipo=parcial" class="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-primary px-7 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/30 hover:bg-primary/90">
+              Hacer el recibo con saldo pendiente
+              <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <!-- Maqueta del recibo con cascada -->
+          <div class="relative mx-auto w-full max-w-sm" aria-hidden="true">
+            <div class="rounded-2xl border border-muted bg-background p-7 shadow-2xl">
+              <div class="flex items-start justify-between">
+                <div><p class="text-lg font-extrabold tracking-tight text-marino">RECIBO DE RENTA</p><p class="text-[11px] text-muted-foreground">Pago parcial · marzo</p></div>
+                <span class="rounded-md bg-muted px-2 py-1 font-mono text-[11px] text-marino">Folio 0057</span>
+              </div>
+              <div class="mt-6 space-y-2">
+                <div class="flex items-center justify-between rounded-xl bg-muted/70 px-4 py-3"><span class="text-sm text-muted-foreground">Saldo anterior</span><span class="font-bold text-marino">$12,000.00</span></div>
+                <div class="flex justify-center text-muted-foreground"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+                <div class="flex items-center justify-between rounded-xl bg-primary/10 px-4 py-3"><span class="text-sm font-medium text-primary">Abono recibido</span><span class="font-bold text-primary">− $6,000.00</span></div>
+                <div class="flex justify-center text-muted-foreground"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+                <div class="flex items-center justify-between rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-3"><span class="text-sm font-semibold text-amber-800">Saldo pendiente</span><span class="text-xl font-extrabold text-amber-700">$6,000.00</span></div>
+              </div>
+              <div class="mt-6 text-center"><p class="firma text-xl text-marino">A. López</p><div class="mx-auto w-40 border-t border-slate-300 pt-1 text-[10px] text-muted-foreground">Firma de quien recibe</div></div>
+            </div>
+            <span class="flotar absolute -right-4 -top-4 rounded-full bg-marino px-3.5 py-2 text-xs font-semibold text-white shadow-xl">La deuda queda por escrito</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO SE DOCUMENTA -->
+      <section class="bg-muted py-20">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl">Cómo se documenta un abono</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl">Tres cifras, en este orden. El recibo muestra las tres.</p>
+          </div>
+          <div class="grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+            <div class="rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <span class="flex size-10 items-center justify-center rounded-full bg-marino text-sm font-bold text-white">1</span>
+              <h3 class="mt-4 text-xl font-bold text-marino">Saldo anterior</h3>
+              <p class="mt-2 text-muted-foreground">Lo que el inquilino debía antes de este pago.</p>
+            </div>
+            <div class="hidden items-center text-muted-foreground md:flex"><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <span class="flex size-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">2</span>
+              <h3 class="mt-4 text-xl font-bold text-marino">Abono</h3>
+              <p class="mt-2 text-muted-foreground">Lo que sí entró ahora, con fecha y forma de pago.</p>
+            </div>
+            <div class="hidden items-center text-muted-foreground md:flex"><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="rounded-2xl border-2 border-amber-300 bg-amber-50 p-7">
+              <span class="flex size-10 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">3</span>
+              <h3 class="mt-4 text-xl font-bold text-marino">Saldo pendiente</h3>
+              <p class="mt-2 text-slate-700">La resta: lo que queda por cubrir. El mes siguiente se vuelve tu nuevo saldo anterior.</p>
+            </div>
+          </div>
+          <p class="mx-auto mt-10 max-w-3xl text-center text-muted-foreground md:text-lg">Es justo lo que los formatos genéricos no traen: casi todos solo permiten poner «recibí tanto», y cuando el pago es incompleto se pierde el rastro del adeudo.</p>
+        </div>
+      </section>
+
+      <!-- POR QUÉ CONVIENE -->
+      <section class="py-20">
+        <div class="container grid items-center gap-12 lg:grid-cols-2">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-4xl">Por qué te conviene, aunque sea incómodo</h2>
+            <p class="text-muted-foreground md:text-lg">Dar recibo de un pago parcial parece darle la razón al inquilino que no completó, pero es al revés: es <strong class="text-marino">la prueba de que el adeudo existe y de cuánto es</strong>.</p>
+            <p class="text-muted-foreground md:text-lg">El día que haya que aclarar cuentas, o iniciar cualquier gestión, un recibo con saldo pendiente, fecha y folio vale mucho más que un acuerdo de palabra.</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-borde bg-background p-6 shadow-sm">
+              <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></span>
+              <p class="mt-4 font-bold text-marino">Para el inquilino</p>
+              <p class="mt-1 text-sm leading-6 text-muted-foreground">Comprueba lo que sí pagó.</p>
+            </div>
+            <div class="rounded-2xl border border-borde bg-background p-6 shadow-sm">
+              <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+              <p class="mt-4 font-bold text-marino">Para ti</p>
+              <p class="mt-1 text-sm leading-6 text-muted-foreground">Deja constancia de lo que se debe.</p>
+            </div>
+            <div class="rounded-2xl bg-marino p-6 text-white shadow-lg sm:col-span-2">
+              <p class="text-lg font-semibold">«Un pago parcial documentado hoy es la prueba de la deuda mañana.»</p>
+              <p class="mt-2 text-sm text-white/70">De la guía <a class="font-medium text-primary hover:underline" href="../../guias/control-de-pagos-de-renta/">Cómo llevar el control de los pagos de renta</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="bg-muted py-20">
+        <div class="container grid gap-10 lg:grid-cols-[1fr_1.6fr]">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-4xl">Preguntas frecuentes</h2>
+            <p class="mt-3 text-muted-foreground">Información general, no asesoría legal ni fiscal.</p>
+          </div>
+          <div class="faq">
+            <details open><summary>¿Cómo hago un recibo si el inquilino pagó incompleto?</summary><div>Registra el saldo anterior, el abono que entró y deja calculado el saldo pendiente; el recibo muestra la cascada completa.</div></details>
+            <details><summary>¿Qué es el saldo pendiente en un recibo de renta?</summary><div>Lo que queda por pagar después del abono: saldo anterior menos abono. Documentarlo te deja el rastro del adeudo.</div></details>
+            <details><summary>¿Conviene dar recibo aunque el pago sea parcial?</summary><div>Sí. Protege a las dos partes: el inquilino comprueba lo que pagó y el arrendador deja constancia de lo que se debe.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTROS CASOS -->
+      <section class="py-20">
+        <div class="container">
+          <div class="mb-10 flex flex-col items-start justify-between gap-3 md:flex-row md:items-end">
+            <div>
+              <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-4xl">Otros casos</h2>
+              <p class="mt-2 text-muted-foreground">El mismo generador se adapta a cada tipo de renta.</p>
+            </div>
+            <a class="text-sm font-semibold text-primary hover:underline" href="../">Ir al generador →</a>
+          </div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <a href="../casa-habitacion/" class="group rounded-2xl border border-borde bg-background p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+              <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/></svg></span>
+              <p class="mt-4 font-bold text-marino group-hover:text-primary">Casa habitación</p>
+              <p class="mt-1 text-sm text-muted-foreground">Vivienda, exenta de IVA. El caso más simple.</p>
+            </a>
+            <a href="../local-comercial/" class="group rounded-2xl border border-borde bg-background p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+              <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg></span>
+              <p class="mt-4 font-bold text-marino group-hover:text-primary">Local comercial</p>
+              <p class="mt-1 text-sm text-muted-foreground">IVA 16% y retenciones de persona moral.</p>
+            </a>
+            <a href="../../guias/control-de-pagos-de-renta/" class="group rounded-2xl border border-borde bg-background p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+              <span class="flex size-11 items-center justify-center rounded-xl bg-marino text-white"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span>
+              <p class="mt-4 font-bold text-marino group-hover:text-primary">Guía: control de pagos</p>
+              <p class="mt-1 text-sm text-muted-foreground">Cómo no perder el saldo con varios inquilinos.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="fondo-marino py-20 text-white">
+        <div class="container text-center">
+          <p class="text-white/70">Este formato resuelve <strong class="text-white">un</strong> recibo.</p>
+          <h2 class="mx-auto mt-2 max-w-3xl text-3xl font-bold tracking-tighter md:text-5xl">¿Varios inquilinos pagando en abonos? Reef arrastra el saldo solo.</h2>
+          <p class="mx-auto mt-3 max-w-[700px] text-white/80 md:text-xl">Tú decides a qué adeudo se aplica cada pago y Reef te dice quién debe, de qué mes y cuánto falta.</p>
+          <div class="mt-6 flex flex-col justify-center gap-2 min-[400px]:flex-row">
+            <a class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="../../index.html">Conoce Reef</a>
+            <a class="inline-flex h-11 items-center justify-center rounded-md border border-white/40 px-8 text-sm font-medium text-white hover:bg-white/10" href="../../descargar/">Descargar gratis</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-muted bg-background">
+      <div class="container py-12">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-5">
+          <div class="col-span-2">
+            <div class="flex items-center gap-2.5">
+              <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Manta" class="size-full object-contain" src="../../assets/manta-white.png" /></span>
+              <span class="text-xl font-bold tracking-tight text-marino">Manta</span>
+            </div>
+            <p class="mt-4 max-w-xs text-muted-foreground">Software que te lleva de la mano. Reef es el primer producto de Manta: gestión de rentas clara para el arrendador.</p>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Reef</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="../../index.html#features">Características</a></li>
+              <li><a class="hover:text-primary" href="../../index.html#pricing">Precios</a></li>
+              <li><a class="hover:text-primary" href="../../descargar/">Descargar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Recursos</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="../../recibo-de-renta/">Recibos gratis</a></li>
+              <li><a class="hover:text-primary" href="../../guias/control-de-pagos-de-renta/">Control de pagos</a></li>
+              <li><a class="hover:text-primary" href="../../guias/contrato-de-arrendamiento/">Contrato de arrendamiento</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Soporte</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="https://wa.me/525558080635">WhatsApp: 55 5808 0635</a></li>
+              <li><a class="hover:text-primary" href="mailto:etorres.paul@gmail.com">Correo</a></li>
+              <li><a class="hover:text-primary" href="../../quien-soy/">Quién está detrás</a></li>
+              <li><a class="hover:text-primary" href="../../privacidad/">Privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-muted pt-8 text-center text-sm text-muted-foreground">© 2026 Manta · Reef. Información general, no asesoría fiscal.</div>
+      </div>
+    </footer>
+  </body>
+</html>

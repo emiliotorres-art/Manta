@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacidad: tus datos no salen de tu equipo · Reef</title>
+    <meta name="description" content="Cómo trata Reef tus datos: la app guarda todo en tu computadora, el generador de recibos funciona en tu navegador, y el respaldo en la nube es opcional. Sin anuncios ni venta de datos." />
+    <link rel="canonical" href="https://mantasssp.com/reef/privacidad/" />
+    <link rel="icon" type="image/png" href="../assets/reef-white.png" />
+    <meta name="robots" content="index,follow" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: white;
+        --color-foreground: #0f172a;
+        --color-primary: #10b981;
+        --color-primary-foreground: #ffffff;
+        --color-marino: #1e293b;
+        --color-muted: #f1f5f9;
+        --color-muted-foreground: #64748b;
+        --color-borde: #e2e8f0;
+      }
+    </style>
+    <link rel="stylesheet" href="../sitio.css" />
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-muted bg-background/90 backdrop-blur">
+      <div class="container flex h-16 items-center justify-between">
+        <a class="flex items-center gap-2.5" href="../index.html">
+          <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Reef" class="size-full object-contain" src="../assets/reef-white.png" /></span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-bold tracking-tight text-marino">Reef</span>
+            <span class="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">un producto Manta</span>
+          </span>
+        </a>
+        <nav class="hidden gap-6 md:flex">
+          <a class="text-sm font-medium hover:text-primary" href="../index.html#features">Características</a>
+          <a class="text-sm font-medium hover:text-primary" href="../index.html#pricing">Precios</a>
+          <a class="text-sm font-medium hover:text-primary" href="../guias/control-de-pagos-de-renta/">Guías</a>
+          <a class="text-sm font-medium text-primary hover:underline" href="../recibo-de-renta/">Recibos gratis</a>
+        </nav>
+        <a class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="../descargar/">Descargar Reef</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="fondo-hero py-16 md:py-24">
+        <div class="container grid items-center gap-12 lg:grid-cols-2">
+          <div class="space-y-5">
+            <nav class="text-xs text-muted-foreground"><a class="hover:text-primary" href="../index.html">Reef</a> <span class="mx-1">/</span> Privacidad</nav>
+            <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              Privacidad · explicada en simple
+            </span>
+            <h1 class="text-4xl font-bold tracking-tighter text-marino md:text-6xl">Tus datos son tuyos y viven en tu equipo.</h1>
+            <p class="max-w-[560px] text-muted-foreground md:text-xl">Tu información de rentas no es nuestro negocio. Esto es lo que pasa —y lo que no pasa— con tus datos cuando usas Reef.</p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <div class="rounded-xl border border-muted bg-background px-4 py-3 shadow-sm">
+                <p class="text-2xl font-extrabold text-marino">0</p>
+                <p class="text-xs text-muted-foreground">anuncios</p>
+              </div>
+              <div class="rounded-xl border border-muted bg-background px-4 py-3 shadow-sm">
+                <p class="text-2xl font-extrabold text-marino">0</p>
+                <p class="text-xs text-muted-foreground">datos vendidos</p>
+              </div>
+              <div class="rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 shadow-sm">
+                <p class="text-2xl font-extrabold text-primary">100%</p>
+                <p class="text-xs text-muted-foreground">en tu computadora</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ilustración: flujo de datos -->
+          <div class="relative mx-auto w-full max-w-md" aria-hidden="true">
+            <div class="rounded-2xl border border-muted bg-background p-5 shadow-2xl">
+              <div class="flex items-center gap-3 border-b border-muted pb-4">
+                <span class="flex size-10 items-center justify-center rounded-xl bg-marino text-white">
+                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </span>
+                <div>
+                  <p class="font-semibold text-marino">Tu computadora</p>
+                  <p class="text-xs text-muted-foreground">sga.db · aquí vive todo</p>
+                </div>
+                <span class="ml-auto inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                  <svg class="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privado
+                </span>
+              </div>
+              <ul class="mt-4 space-y-2.5 text-sm">
+                <li class="flex items-center justify-between rounded-lg bg-muted/60 px-3 py-2"><span class="font-medium text-marino">Propiedades</span><span class="text-muted-foreground">12</span></li>
+                <li class="flex items-center justify-between rounded-lg bg-muted/60 px-3 py-2"><span class="font-medium text-marino">Inquilinos y contratos</span><span class="text-muted-foreground">9</span></li>
+                <li class="flex items-center justify-between rounded-lg bg-muted/60 px-3 py-2"><span class="font-medium text-marino">Pagos y adeudos</span><span class="text-muted-foreground">148</span></li>
+              </ul>
+            </div>
+
+            <div class="relative flex h-16 justify-center">
+              <span class="h-full border-l-2 border-dashed border-primary/50"></span>
+              <span class="absolute left-1/2 top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap text-[11px] font-medium text-primary">solo si tú lo activas</span>
+            </div>
+
+            <div class="mx-auto flex w-64 items-center gap-3 rounded-2xl border border-dashed border-primary/50 bg-background/90 p-4 shadow-lg">
+              <span class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              </span>
+              <div>
+                <p class="text-sm font-semibold text-marino">Respaldo en la nube</p>
+                <p class="text-xs text-muted-foreground">Opcional · espacio privado</p>
+              </div>
+            </div>
+
+            <span class="flotar absolute -right-3 -top-5 flex size-14 items-center justify-center rounded-2xl bg-primary text-white shadow-xl">
+              <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ PASA CON TUS DATOS -->
+      <section class="bg-muted py-20">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl">Qué pasa con tus datos</h2>
+            <p class="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl">Cuatro piezas, cuatro respuestas claras.</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="flex flex-col gap-3 rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 17.5v-11"/></svg>
+                </span>
+                <span class="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">En tu navegador</span>
+              </div>
+              <h3 class="text-xl font-bold text-marino">El generador de recibos</h3>
+              <p class="text-muted-foreground">Todo ocurre en tu navegador: el PDF se arma en tu propia computadora y los datos no viajan a ningún servidor. Los nombres, direcciones y el folio que reutilizas se guardan en el <strong class="text-marino">almacenamiento local de tu navegador</strong>, y los borras cuando quieras con «Borrar guardados». Sin registro ni correo.</p>
+            </article>
+
+            <article class="flex flex-col gap-3 rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+                </span>
+                <span class="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">En tu equipo</span>
+              </div>
+              <h3 class="text-xl font-bold text-marino">La aplicación Reef</h3>
+              <p class="text-muted-foreground">Propiedades, inquilinos, contratos, pagos y egresos se guardan en una base de datos <strong class="text-marino">en tu propia computadora</strong>, junto al programa. De forma predeterminada, nada de eso se sube a internet.</p>
+            </article>
+
+            <article class="flex flex-col gap-3 rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                </span>
+                <span class="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary">Opcional</span>
+              </div>
+              <h3 class="text-xl font-bold text-marino">Respaldo en la nube</h3>
+              <p class="text-muted-foreground">En los planes de pago puedes activar un respaldo. Si lo enciendes <strong class="text-marino">tú</strong>, Reef sube una copia de tu base a un espacio privado (Supabase), ligado a tu licencia, para recuperarla si cambias de equipo. Está apagado hasta que lo activas y puedes dejar de usarlo cuando quieras.</p>
+            </article>
+
+            <article class="flex flex-col gap-3 rounded-2xl border border-borde bg-background p-7 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></svg>
+                </span>
+                <span class="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">Solo un código</span>
+              </div>
+              <h3 class="text-xl font-bold text-marino">La licencia</h3>
+              <p class="text-muted-foreground">Para validar tu plan, la app envía un <strong class="text-marino">identificador de instalación</strong> (un código del equipo) y la versión del programa. Tus datos de arrendamiento no se envían para esto: solo lo necesario para confirmar que tu licencia está activa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGISTRO DEL TITULAR -->
+      <section class="py-20">
+        <div class="container grid items-center gap-12 lg:grid-cols-2">
+          <div class="space-y-4">
+            <span class="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Solo si usas el respaldo</span>
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-4xl">El registro del titular</h2>
+            <p class="text-muted-foreground md:text-lg">Antes de tu primer respaldo en la nube te pedimos registrar a nombre de quién está la licencia. Así sabemos a quién pertenece cada respaldo y podemos ayudarte a recuperarlo.</p>
+            <p class="text-muted-foreground md:text-lg">No los vendemos ni los compartimos. Si quieres que los borremos, <a class="font-medium text-primary hover:underline" href="mailto:etorres.paul@gmail.com">escríbenos</a>.</p>
+          </div>
+          <div class="rounded-2xl border border-borde bg-background p-2 shadow-xl">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-left text-xs uppercase tracking-wider text-muted-foreground">
+                  <th class="px-4 py-3 font-semibold">Dato</th>
+                  <th class="px-4 py-3 font-semibold">Para qué lo usamos</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-muted">
+                <tr><td class="px-4 py-3.5 font-semibold text-marino">Nombre y apellido</td><td class="px-4 py-3.5 text-muted-foreground">Saber de quién es cada respaldo.</td></tr>
+                <tr><td class="px-4 py-3.5 font-semibold text-marino">Usuario</td><td class="px-4 py-3.5 text-muted-foreground">Identificarte si usas Reef en otro equipo.</td></tr>
+                <tr><td class="px-4 py-3.5 font-semibold text-marino">Contraseña</td><td class="px-4 py-3.5 text-muted-foreground"><span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">Cifrada</span> Nunca la vemos en texto.</td></tr>
+                <tr><td class="px-4 py-3.5 font-semibold text-marino">Celular</td><td class="px-4 py-3.5 text-muted-foreground">Contactarte para ayudarte a recuperar tus datos.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- LO QUE NO HACEMOS -->
+      <section class="bg-muted py-20">
+        <div class="container">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tighter text-marino md:text-5xl">Lo que no hacemos</h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl border border-borde bg-background p-7 text-center shadow-sm">
+              <span class="mx-auto flex size-12 items-center justify-center rounded-full bg-red-50 text-red-500">
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+              </span>
+              <h3 class="mt-4 text-lg font-bold text-marino">No vendemos tus datos</h3>
+              <p class="mt-2 text-muted-foreground">Ni los rentamos ni los compartimos con terceros.</p>
+            </div>
+            <div class="rounded-2xl border border-borde bg-background p-7 text-center shadow-sm">
+              <span class="mx-auto flex size-12 items-center justify-center rounded-full bg-red-50 text-red-500">
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
+              </span>
+              <h3 class="mt-4 text-lg font-bold text-marino">Sin anuncios ni rastreadores</h3>
+              <p class="mt-2 text-muted-foreground">No hay publicidad ni rastreo publicitario en la app ni en el sitio.</p>
+            </div>
+            <div class="rounded-2xl border border-borde bg-background p-7 text-center shadow-sm">
+              <span class="mx-auto flex size-12 items-center justify-center rounded-full bg-red-50 text-red-500">
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+              </span>
+              <h3 class="mt-4 text-lg font-bold text-marino">Sin cuenta ni tarjeta</h3>
+              <p class="mt-2 text-muted-foreground">No las pedimos para usar el generador ni para empezar con Reef.</p>
+            </div>
+          </div>
+
+          <div class="mx-auto mt-12 flex max-w-3xl flex-col items-center gap-4 rounded-2xl border border-borde bg-background p-6 text-center shadow-sm sm:flex-row sm:text-left">
+            <span class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-marino text-white">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <div class="flex-1">
+              <p class="font-semibold text-marino">¿Dudas sobre tus datos o quieres que los borremos?</p>
+              <p class="text-sm text-muted-foreground">Te responde una persona, no un formulario.</p>
+            </div>
+            <a class="inline-flex h-10 items-center rounded-md border border-borde px-4 text-sm font-medium text-marino hover:bg-muted" href="mailto:etorres.paul@gmail.com">etorres.paul@gmail.com</a>
+          </div>
+          <p class="mt-6 text-center text-xs text-muted-foreground">Última actualización: 26 de septiembre de 2026.</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="fondo-marino py-20 text-white">
+        <div class="container text-center">
+          <h2 class="text-3xl font-bold tracking-tighter md:text-5xl">Privado por diseño, desde el primer día.</h2>
+          <p class="mx-auto mt-3 max-w-[700px] text-white/80 md:text-xl">Descarga Reef y lleva tus rentas en tu computadora. Gratis para empezar, sin cuenta ni tarjeta.</p>
+          <div class="mt-6 flex flex-col justify-center gap-2 min-[400px]:flex-row">
+            <a class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90" href="../descargar/">Descargar Reef</a>
+            <a class="inline-flex h-11 items-center justify-center rounded-md border border-white/40 px-8 text-sm font-medium text-white hover:bg-white/10" href="../quien-soy/">Quién está detrás</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-muted bg-background">
+      <div class="container py-12">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-5">
+          <div class="col-span-2">
+            <div class="flex items-center gap-2.5">
+              <span class="flex size-9 items-center justify-center rounded-lg bg-marino p-1.5"><img alt="Manta" class="size-full object-contain" src="../assets/manta-white.png" /></span>
+              <span class="text-xl font-bold tracking-tight text-marino">Manta</span>
+            </div>
+            <p class="mt-4 max-w-xs text-muted-foreground">Software que te lleva de la mano. Reef es el primer producto de Manta: gestión de rentas clara para el arrendador.</p>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Reef</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="../index.html#features">Características</a></li>
+              <li><a class="hover:text-primary" href="../index.html#pricing">Precios</a></li>
+              <li><a class="hover:text-primary" href="../descargar/">Descargar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Recursos</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="../recibo-de-renta/">Recibos gratis</a></li>
+              <li><a class="hover:text-primary" href="../guias/control-de-pagos-de-renta/">Control de pagos</a></li>
+              <li><a class="hover:text-primary" href="../guias/contrato-de-arrendamiento/">Contrato de arrendamiento</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider">Soporte</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li><a class="hover:text-primary" href="https://wa.me/525558080635">WhatsApp: 55 5808 0635</a></li>
+              <li><a class="hover:text-primary" href="mailto:etorres.paul@gmail.com">Correo</a></li>
+              <li><a class="hover:text-primary" href="../quien-soy/">Quién está detrás</a></li>
+              <li><a class="font-medium text-primary" href="../privacidad/">Privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-muted pt-8 text-center text-sm text-muted-foreground">© 2026 Manta · Reef.</div>
+      </div>
+    </footer>
+  </body>
+</html>
